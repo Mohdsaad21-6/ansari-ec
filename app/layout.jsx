@@ -1,4 +1,12 @@
 import "./globals.css";
+import {Assistant} from "next/font/google";
+
+const assistantFont = Assistant({
+  weight: ["400", "500", "600", "700", "800", ],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-assistant",
+});
 
 
 export const metadata = {
@@ -10,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body
-        className={`antialiased`}
+        className={`${assistantFont.className}antialiased`}
       >
         {children}
       </body>
